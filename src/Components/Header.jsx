@@ -5,7 +5,7 @@ const Header = () => {
     <div className="bg-[#FF66C4] flex flex-row justify-between items-center p-2">
       <div>
         <img
-          className="w-20 h-20"
+          className="w-18 h-18"
           src="../../src/assets/Images/heroLogo.png"
           alt=""
         />

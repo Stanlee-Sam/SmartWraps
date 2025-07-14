@@ -1,10 +1,12 @@
 import React from "react";
 import Header from "./Components/Header";
+import Hero from "./Components/Hero";
 
 const App = () => {
   return (
-    <div>
+    <div className="h-screen">
       <Header />
+      <Hero />
     </div>
   );
 };
