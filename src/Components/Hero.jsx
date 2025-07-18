@@ -1,5 +1,3 @@
-import React from "react";
-
 const Hero = () => {
   return (
     <div className="relative">
@@ -8,7 +6,7 @@ const Hero = () => {
       "
       >
         <img
-          className="h-full w-full object-cover object-center brightness-35 "
+          className="h-full w-full object-cover object-center brightness-35 relative overflow-hidden bg-center bg-fixed bg-no-repeat "
           src="../../src/assets/Images/hero.jpg"
           alt=""
         />
@@ -26,7 +24,10 @@ const Hero = () => {
         >
           Pre-Covered School Books And Stationery Delivered to You
         </p>
-        <button className="cursor-pointer mt-4 px-6 py-2 md:px-8 md:py-3 bg-[#FF66C4] text-black font-bold rounded-lg hover:bg-[#59BDF1] hover:text-white transition-colors duration-300 border-2 border-black shadow-lg active:scale-95">
+        <button
+          style={{ fontFamily: "'Bree Serif'" }}
+          className="cursor-pointer mt-4 px-6 py-2 md:px-8 md:py-3 bg-[#FF66C4] text-black font-bold rounded-lg hover:bg-[#59BDF1] hover:text-white transition-colors duration-300 border-2 border-black shadow-lg active:scale-95"
+        >
           Get Started
         </button>
       </div>
