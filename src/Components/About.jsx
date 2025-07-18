@@ -11,14 +11,14 @@ const About = () => {
           About Us
         </h2>
       </div>
-      <div className="flex md:flex-row md:justify-between flex-col gap-3 p-3 w-full ">
+      <div className="flex md:flex-row md:justify-evenly flex-col gap-3 p-3 w-full ">
         <div className="md:w-1/2 flex flex-col items-center" >
           <img 
-          className="rounded-xl w-100 h-100 md:w-[237px] md:h-[237px]"
+          className="rounded-xl w-100 h-100 md:w-[300px] md:h-[270px]"
           src="../../src/assets/Images/about.jpeg" alt="" />
         </div>
-        <div className="md:w-1/2 flex flex-col items-center">
-          <p className="text-center text-[15px] font-semibold w-100 h-100" style={{fontFamily : 'Bree Serif'}}>
+        <div className="md:w-1/2 flex flex-col justify-center">
+          <p className="text-start text-[15px] font-semibold w-[80%]" style={{fontFamily : 'Bree Serif'}}>
             SmartWraps makes back-to-school easy for parents. We deliver
             stationery and beautifully covered exercise books that are ready to
             use, with no mess or hassle. We partner with trusted suppliers like
