@@ -54,7 +54,7 @@ const Contact = () => {
             <h3 style={{ fontFamily: "'Bree Serif'" }} className="p-5 font-bold text-center">Send Message</h3>
             <div className="grid place-items-center gap-5 p-5 w-full">
               <input style={{ fontFamily: "'Bree Serif'" }}
-                className="p-3 rounded-lg text-black flex w-full"
+                className="p-3 border-b rounded-lg text-black flex w-full"
                 type="text"
                 id="name"
                 name="name"
@@ -62,13 +62,13 @@ const Contact = () => {
                 required
               />
               <input style={{ fontFamily: "'Bree Serif'" }}
-                className="p-3 rounded-lg text-black flex w-full "
+                className="p-3 border-b rounded-lg text-black flex w-full "
                 type="email"
                 placeholder="Enter Email"
               />
 
               <textarea style={{ fontFamily: "'Bree Serif'" }}
-                className="p-3 rounded-lg text-black flex w-full h-[150px] resize-none"
+                className="p-3 border-b-1 rounded-lg text-black flex w-full h-[150px] resize-none"
                 rows="5"
                 id="message"
                 name="message"

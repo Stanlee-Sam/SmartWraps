@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <div className="relative">
       <div
-        className=" rounded-b-[30px] h-[calc(100svh-4rem) md:h-[calc(100vh-80px)] w-full overflow-hidden
+        className=" rounded-b-lg h-[calc(100svh-4rem) md:h-[calc(100vh-80px)] w-full overflow-hidden
       "
       >
         <img
