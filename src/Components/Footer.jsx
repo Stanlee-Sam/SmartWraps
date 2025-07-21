@@ -1,7 +1,4 @@
-import { FiFacebook } from "react-icons/fi";
-import { FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaTiktok, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <section className="bg-black rounded-t-lg">
@@ -24,34 +21,56 @@ const Footer = () => {
           </div>
           <div className="flex justify-evenly gap-5 md:gap-4 text-2xl p-4">
             <a href="#">
-              <FiFacebook className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300" />
+              <FaTiktok className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300" />
             </a>
             <a href="#">
-              <FaInstagram className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300" />
+              <FaWhatsapp className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300" />
             </a>
-            <a href="#">
+            {/* <a href="#">
               <FaXTwitter className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300" />
             </a>
             <a href="#">
               <FaGithubSquare className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300" />
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="text-white md:flex md:justify-evenly grid place-items-left ml-10 gap-5 md:gap-20 ">
           <div>
-            <h5 style={{ fontFamily: "'Bree Serif'" }} className="font-bold uppercase">Company</h5>
+            <h5
+              style={{ fontFamily: "'Bree Serif'" }}
+              className="font-bold uppercase"
+            >
+              Company
+            </h5>
             <ul className="font-light cursor-pointer ">
-              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">About Us</li>
-              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">Products</li>
-              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">Contact Us</li>
+              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
+                About Us
+              </li>
+              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
+                Products
+              </li>
+              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
+                Contact Us
+              </li>
             </ul>
           </div>
           <div>
-            <h5 style={{ fontFamily: "'Bree Serif'" }} className="font-bold uppercase">Products</h5>
+            <h5
+              style={{ fontFamily: "'Bree Serif'" }}
+              className="font-bold uppercase"
+            >
+              Products
+            </h5>
             <ul className="font-light cursor-pointer">
-              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">Mini</li>
-              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">Mega</li>
-              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">Maxi</li>
+              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
+                Mini
+              </li>
+              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
+                Mega
+              </li>
+              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
+                Maxi
+              </li>
             </ul>
           </div>
           {/* <div>
@@ -65,7 +84,10 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p style={{ fontFamily: "'Bree Serif'" }} className="text-white text-center md:pt-5 p-3">
+        <p
+          style={{ fontFamily: "'Bree Serif'" }}
+          className="text-white text-center md:pt-5 p-3"
+        >
           © 2025 SmartWraps. All rights reserved.
         </p>
       </div>
