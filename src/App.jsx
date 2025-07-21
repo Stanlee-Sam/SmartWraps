@@ -8,7 +8,7 @@ import Footer from "./Components/Footer";
 
 const App = () => {
   return (
-    <div className="h-screen">
+    <div className="h-screen overflow-auto [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-scrollbar:{display:none}]">
       <Header />
       <Hero />
       <About />

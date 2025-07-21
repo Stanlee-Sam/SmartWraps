@@ -1,12 +1,12 @@
 const Hero = () => {
   return (
-    <div className="relative">
+    <div className="relative h-screen">
       <div
         className=" rounded-b-lg h-[calc(100svh-4rem) md:h-[calc(100vh-80px)] w-full overflow-hidden
       "
       >
         <img
-          className="h-full w-full object-cover object-center brightness-35 relative overflow-hidden bg-center bg-fixed bg-no-repeat "
+          className="h-screen w-full object-cover object-center brightness-35 relative overflow-hidden bg-center bg-fixed bg-no-repeat "
           src="../../src/assets/Images/hero.jpg"
           alt=""
         />
