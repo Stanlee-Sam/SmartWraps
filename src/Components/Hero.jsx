@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="relative h-screen">
+    <div id="home" className="relative h-screen">
       <div
         className=" rounded-b-lg h-[calc(100svh-4rem) md:h-[calc(100vh-80px)] w-full overflow-hidden
       "
@@ -24,12 +24,14 @@ const Hero = () => {
         >
           Pre-Covered School Books And Stationery Delivered to You
         </p>
-        <button
+        <a href="#about">
+          <button
           style={{ fontFamily: "'Bree Serif'" }}
           className="cursor-pointer mt-4 px-6 py-2 md:px-8 md:py-3 bg-[#FF66C4] text-black font-bold rounded-lg hover:bg-[#59BDF1] hover:text-white transition-colors duration-300 border-2 border-black shadow-lg active:scale-95"
         >
           Get Started
         </button>
+        </a>
       </div>
     </div>
   );

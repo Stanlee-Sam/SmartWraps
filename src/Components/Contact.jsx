@@ -4,7 +4,7 @@ import { IoMail } from "react-icons/io5";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col gap-3 items-center p-3 w-full">
+    <div id="contact" className="flex flex-col gap-3 items-center p-3 w-full">
       <div>
         <h2
           className="font-bold text-[20px] md:text-[28px]"

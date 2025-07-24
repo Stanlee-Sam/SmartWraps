@@ -1,13 +1,16 @@
 import { FaTiktok, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router";
 const Footer = () => {
   return (
     <section className="bg-black rounded-t-lg">
       <div className="grid">
-        <img
-          className="w-[150px] place-self-center   "
-          src="../../src/assets/Images/footerLogo.png"
-          alt=""
-        />
+        <a href="#home">
+          <img
+            className="w-[150px] place-self-center   "
+            src="../../src/assets/Images/footerLogo.png"
+            alt=""
+          />
+        </a>
       </div>
       <div className="md:flex md:justify-evenly">
         <div className="text-white grid place-items-center items-center">
@@ -43,15 +46,22 @@ const Footer = () => {
               Company
             </h5>
             <ul className="font-light cursor-pointer ">
-              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
-                About Us
-              </li>
-              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
-                Products
-              </li>
-              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
-                Contact Us
-              </li>
+              <a href="#about">
+                <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
+                  About Us
+                </li>
+              </a>
+              <a href="#products">
+                <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
+                  Products
+                </li>
+              </a>
+
+              <a href="#contact">
+                <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
+                  Contact Us
+                </li>
+              </a>
             </ul>
           </div>
           <div>
@@ -62,15 +72,23 @@ const Footer = () => {
               Products
             </h5>
             <ul className="font-light cursor-pointer">
-              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
-                Mini
-              </li>
-              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
-                Mega
-              </li>
-              <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
-                Maxi
-              </li>
+              <a href="#products">
+                <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
+                  Mini
+                </li>
+              </a>
+
+              <a href="#products">
+                <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
+                  Mega
+                </li>
+              </a>
+
+              <a href="#products">
+                <li className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300">
+                  Maxi
+                </li>
+              </a>
             </ul>
           </div>
           {/* <div>
