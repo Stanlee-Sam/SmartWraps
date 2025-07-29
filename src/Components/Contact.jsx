@@ -1,10 +1,18 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react"
+
 
 const Contact = () => {
   return (
-    <div id="contact" className="flex flex-col gap-3 items-center p-3 w-full">
+    <motion.div 
+     initial = {{opacity : 0,rotateX : "90deg"}}
+    whileInView={{opacity : 1, rotateX : 0}}
+    transition={{duration: 2}}
+    viewport={{once : true}}
+    id="contact" className="flex flex-col gap-3 items-center p-3 w-full">
       <div>
         <h2
           className="font-bold text-[20px] md:text-[28px]"
@@ -88,7 +96,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

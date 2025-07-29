@@ -1,8 +1,15 @@
-import React from "react";
-
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react";
 const About = () => {
   return (
-    <div id="about" className="p-3  flex flex-col items-center">
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: true }}
+      id="about"
+      className="p-3  flex flex-col items-center"
+    >
       <div>
         <h2
           className="font-bold text-[20px] md:text-[28px]"
@@ -35,7 +42,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

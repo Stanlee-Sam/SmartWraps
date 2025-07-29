@@ -1,3 +1,6 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react";
+
 const Hero = () => {
   return (
     <div id="home" className="relative h-screen">
@@ -11,7 +14,13 @@ const Hero = () => {
           alt=""
         />
       </div>
-      <div className=" flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-2">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 2 }}
+        viewport={{ once: true }}
+        className=" flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-2"
+      >
         <h1
           className="text-4xl md:text-[96px] font-bold text-white drop-shadow-lg  text-center "
           style={{ fontFamily: "'Kaushan Script', cursive" }}
@@ -26,13 +35,13 @@ const Hero = () => {
         </p>
         <a href="#about">
           <button
-          style={{ fontFamily: "'Bree Serif'" }}
-          className="cursor-pointer mt-4 px-6 py-2 md:px-8 md:py-3 bg-[#FF66C4] text-black font-bold rounded-lg hover:bg-[#59BDF1] hover:text-white transition-colors duration-300 border-2 border-black shadow-lg active:scale-95"
-        >
-          Get Started
-        </button>
+            style={{ fontFamily: "'Bree Serif'" }}
+            className="cursor-pointer mt-4 px-6 py-2 md:px-8 md:py-3 bg-[#FF66C4] text-black font-bold rounded-lg hover:bg-[#59BDF1] hover:text-white transition-colors duration-300 border-2 border-black shadow-lg active:scale-95"
+          >
+            Get Started
+          </button>
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 };
