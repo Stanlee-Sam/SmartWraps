@@ -20,20 +20,22 @@ const Links = () => {
         Mini Hamper
       </Link>
       <span className="font-bold text-2xl">|</span>
-      <Link
-        to="/mega"
-        style={{ fontFamily: "'Bree Serif'" }}
-        className="text-center w-full font-bold cursor-pointer hover:bg-gray-800 p-2 rounded-md  hover:text-white  transition-colors duration-300 ease-in-out active:bg-[#59bdf1] active:text-white"
-      >
-        Mega Hamper
-      </Link>
-      <span className="font-bold text-2xl">|</span>
+
       <Link
         to="/maxi"
         style={{ fontFamily: "'Bree Serif'" }}
         className=" text-center w-full font-bold cursor-pointer hover:bg-gray-800 p-2 rounded-md  hover:text-white  transition-colors duration-300 ease-in-out active:bg-[#59bdf1] active:text-white"
       >
         Maxi Hamper
+      </Link>
+      <span className="font-bold text-2xl">|</span>
+
+      <Link
+        to="/mega"
+        style={{ fontFamily: "'Bree Serif'" }}
+        className="text-center w-full font-bold cursor-pointer hover:bg-gray-800 p-2 rounded-md  hover:text-white  transition-colors duration-300 ease-in-out active:bg-[#59bdf1] active:text-white"
+      >
+        Mega Hamper
       </Link>
     </>
   );
