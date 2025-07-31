@@ -1,12 +1,12 @@
 import miniImg from "../../../src/assets/Products/MiniHamper.jpg";
 
-const Mini = [
+const minis = [
   {
     id: 1,
     name: "Mini Hamper",
     img: miniImg,
-    price: 465.00,
-    spec: [
+    price: 465.0,
+    specs: [
       "1 Covered Excercise Book",
       "1 Gel Pen",
       "3 Eclairs",
@@ -15,4 +15,4 @@ const Mini = [
   },
 ];
 
-export default Mini;
+export default minis;

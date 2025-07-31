@@ -1,12 +1,12 @@
 import maxiImg from "../../../src/assets/Products/MaxiHamper.jpg";
 
-const Maxi = [
+const maxis = [
   {
     id: 1,
     name: "Maxi Hamper",
     img: maxiImg,
     price: 700.00,
-    spec: [
+    specs: [
       "2 Covered Excercise Books",
       "2 Gel Pens",
       '1 Sticky Note Pack',
@@ -16,4 +16,4 @@ const Maxi = [
   },
 ];
 
-export default Maxi;
+export default maxis;

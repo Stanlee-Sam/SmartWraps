@@ -1,32 +1,91 @@
-import React from 'react'
-import { Card, CardContent } from "../../Components/ui/card"
+import React, { useState } from "react";
+import { Card, CardContent } from "../../Components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "../../Components/ui/carousel"
+} from "../../Components/ui/carousel";
+import megas from "../Products/Mega";
+import { MdCancel } from "react-icons/md";
 const Mega = () => {
-  return (
-     <Carousel className="w-full max-w-xs">
-          <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index}>
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-4xl font-semibold">{index + 1}</span>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-  )
-}
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
-export default Mega
+  return (
+    <Carousel className="w-full max-w-xs">
+      <CarouselContent>
+        {megas.map((mega, index) => (
+          <CarouselItem key={index}>
+            <div className="p-1">
+              <Card
+                onClick={() => setSelectedProduct(mega)}
+                className="cursor-pointer"
+              >
+                <CardContent className="flex flex-col gap-2 aspect-square items-center justify-center">
+                  <img
+                    className="rounded-lg w-[200px] h-[300px]"
+                    src={mega.img}
+                    alt=""
+                  />
+                  <h2
+                    style={{ fontFamily: "Bree Serif" }}
+                    className="font-bold italic"
+                  >
+                    {mega.name}
+                  </h2>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+      {selectedProduct && (
+        <>
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div className="flex flex-col items-center gap-1.5 bg-[#FF66C4] p-6 rounded-lg max-w-md w-[80%] relative">
+              <button
+                className="absolute top-2 right-2 text-white text-2xl hover:text-gray-800 cursor-pointer"
+                onClick={() => setSelectedProduct(null)}
+              >
+                <MdCancel />
+              </button>
+
+              <img
+                className="rounded-md w-[50%]"
+                src={selectedProduct.img}
+                alt=""
+              />
+              <h2
+                style={{ fontFamily: "Bree Serif" }}
+                className="font-bold text-center"
+              >
+                {selectedProduct.name}
+              </h2>
+              <p style={{ fontFamily: "Bree Serif" }}>{selectedProduct.desc}</p>
+
+              <ul className="list-disc pl-5 ">
+                {selectedProduct.specs.map((spec, SpecIndex) => (
+                  <li
+                    style={{ fontFamily: "Bree Serif" }}
+                    className="text-[12px] italic"
+                    key={SpecIndex}
+                  >
+                    {spec}
+                  </li>
+                ))}
+              </ul>
+              <p style={{ fontFamily: "Bree Serif" }}>
+                <strong>Price :</strong> Ksh {selectedProduct.price}
+              </p>
+            </div>
+          </div>
+        </>
+      )}
+    </Carousel>
+  );
+};
+
+export default Mega;

@@ -7,7 +7,7 @@ const Links = () => {
       <Link
         to="/"
         style={{ fontFamily: "'Bree Serif'" }}
-        className="text-center  w-full font-bold cursor-pointer hover:bg-gray-800 p-2 rounded-md  hover:text-white  transition-colors duration-300 ease-in-out active:bg-[#59bdf1] active:text-white"
+        className="text-[10px] md:text-[15px] text-center  w-full font-bold cursor-pointer hover:bg-gray-800 p-2 rounded-md  hover:text-white  transition-colors duration-300 ease-in-out active:bg-[#59bdf1] active:text-white"
       >
         Excercise Books
       </Link>
@@ -15,7 +15,7 @@ const Links = () => {
       <Link
         to="/mini"
         style={{ fontFamily: "'Bree Serif'" }}
-        className="text-center w-full font-bold cursor-pointer hover:bg-gray-800 p-2 rounded-md  hover:text-white  transition-colors duration-300 ease-in-out active:bg-[#59bdf1] active:text-white"
+        className="text-[10px] md:text-[15px] text-center w-full font-bold cursor-pointer hover:bg-gray-800 p-2 rounded-md  hover:text-white  transition-colors duration-300 ease-in-out active:bg-[#59bdf1] active:text-white"
       >
         Mini Hamper
       </Link>
@@ -24,7 +24,7 @@ const Links = () => {
       <Link
         to="/maxi"
         style={{ fontFamily: "'Bree Serif'" }}
-        className=" text-center w-full font-bold cursor-pointer hover:bg-gray-800 p-2 rounded-md  hover:text-white  transition-colors duration-300 ease-in-out active:bg-[#59bdf1] active:text-white"
+        className="text-[10px] md:text-[15px]  text-center w-full font-bold cursor-pointer hover:bg-gray-800 p-2 rounded-md  hover:text-white  transition-colors duration-300 ease-in-out active:bg-[#59bdf1] active:text-white"
       >
         Maxi Hamper
       </Link>
@@ -33,7 +33,7 @@ const Links = () => {
       <Link
         to="/mega"
         style={{ fontFamily: "'Bree Serif'" }}
-        className="text-center w-full font-bold cursor-pointer hover:bg-gray-800 p-2 rounded-md  hover:text-white  transition-colors duration-300 ease-in-out active:bg-[#59bdf1] active:text-white"
+        className="text-[10px] md:text-[15px] text-center w-full font-bold cursor-pointer hover:bg-gray-800 p-2 rounded-md  hover:text-white  transition-colors duration-300 ease-in-out active:bg-[#59bdf1] active:text-white"
       >
         Mega Hamper
       </Link>

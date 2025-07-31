@@ -1,13 +1,13 @@
 import megaImgB from "../../../src/assets/Products/MegaHamperB.jpg";
 import megaImgG from "../../../src/assets/Products/MegaHamperG.jpg";
 
-const Mega = [
+const megas = [
   {
     id: 1,
     name: "Mega Hamper",
     img: megaImgB,
     price: 1000.00,
-    spec: [
+    specs: [
       "1 Pencil Pouch",
       "3 Covered Excercise Books",
       "1 Sticky Note Pack",
@@ -21,7 +21,7 @@ const Mega = [
     name: "Mega Hamper",
     img: megaImgG,
     price: 1000.00,
-    spec: [
+    specs: [
       "1 Pencil Pouch",
       "3 Covered Excercise Books",
       "1 Sticky Note Pack",
@@ -32,4 +32,4 @@ const Mega = [
   },
 ];
 
-export default Mega;
+export default megas;
