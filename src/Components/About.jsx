@@ -5,7 +5,7 @@ const About = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 1 }}
       viewport={{ once: true }}
       id="about"
       className="p-3  flex flex-col items-center"

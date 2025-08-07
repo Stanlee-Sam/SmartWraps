@@ -1,53 +1,92 @@
 import React, { useState } from "react";
-import { Card, CardContent } from "../../Components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "../../Components/ui/carousel";
+
+import { Swiper, SwiperSlide } from "swiper/react";
 import minis from "../Products/Mini";
+
 import { MdCancel } from "react-icons/md";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+
+import { Navigation } from "swiper/modules";
+import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const Mini = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [swiperRef, setSwiperRef] = useState(null);
 
   return (
-    <div>
-      <Carousel className="w-full max-w-xs">
-        <CarouselContent>
-          {minis.map((mini, index) => (
-            <CarouselItem key={index}>
-              <div className="p-1">
-                <Card
+    <div className=" flex items-center justify-center p-4">
+      <Swiper
+        className="relative w-full max-w-md mx-auto p-4"
+        style={{ height: "400px" }}
+        breakpoints={{
+          340: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          700: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+        }}
+        speed={2100}
+        slidesPerGroup={1}
+        modules={[Navigation]}
+        onSwiper={(swiper) => setSwiperRef(swiper)}
+      >
+        <button
+          onClick={() => swiperRef?.slidePrev()}
+          className="cursor-pointer absolute md:left-0.5 left-10 top-1/2 transform -translate-y-1/2 z-10 bg-black hover:bg-white hover:text-[#59BDF1] text-[#FF66C4] transition-colors duration-300 rounded-full p-2 shadow  hover:scale-105"
+        >
+          <MdArrowBack size={20} />
+        </button>
+
+        <button
+          onClick={() => swiperRef?.slideNext()}
+          className="cursor-pointer absolute md:right-0.5 right-10 top-1/2 transform -translate-y-1/2 z-10 bg-black hover:bg-white hover:text-[#59BDF1] text-[#FF66C4] transition-colors duration-300 rounded-full p-2 shadow hover:scale-105"
+        >
+          <MdArrowForward size={20} />
+        </button>
+
+        {minis.map((mini, index) => (
+          <SwiperSlide key={index}>
+            <div className=" p-3  rounded-sm ">
+              <div className=" flex flex-col gap-2 aspect-square items-center  ">
+                <div
                   onClick={() => setSelectedProduct(mini)}
-                  className="cursor-pointer"
+                  className="cursor-pointer rounded-md flex flex-col items-center gap-3 bg-white p-3"
                 >
-                  <CardContent className="flex flex-col gap-2 aspect-square items-center justify-center">
-                    <img
-                      className="rounded-lg w-[200px] h-[300px]"
-                      src={mini.img}
-                      alt=""
-                    />
-                    <h2
-                      style={{ fontFamily: "Bree Serif" }}
-                      className="font-bold italic"
-                    >
-                      {mini.name}
-                    </h2>
-                  </CardContent>
-                </Card>
+                  <img
+                    className="rounded-lg w-50 h-70  bg-center"
+                    src={mini.img}
+                    alt=""
+                  />
+
+                  <h2
+                    style={{ fontFamily: "Bree Serif" }}
+                    className="font-bold italic"
+                  >
+                    {mini.name}
+                  </h2>
+                  <h2
+                    style={{ fontFamily: "Bree Serif" }}
+                    className="font-bold italic"
+                  >
+                    Ksh {mini.price}
+                  </h2>
+                </div>
               </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+            </div>
+          </SwiperSlide>
+        ))}
+
         {selectedProduct && (
           <>
-            <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-              <div className="flex flex-col items-center gap-1.5 bg-[#FF66C4] p-6 rounded-lg max-w-md w-[80%] relative">
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 mt-9 md:mt-12">
+              <div className="flex flex-col items-center gap-2 bg-[#FF66C4] p-6 rounded-lg max-w-md w-[80%] relative">
                 <button
                   className="absolute top-2 right-2 text-white text-2xl hover:text-gray-800 cursor-pointer"
                   onClick={() => setSelectedProduct(null)}
@@ -56,7 +95,7 @@ const Mini = () => {
                 </button>
 
                 <img
-                  className="rounded-md w-[60%]"
+                  className="rounded-md w-[60%] md:w-[50%]"
                   src={selectedProduct.img}
                   alt=""
                 />
@@ -66,8 +105,9 @@ const Mini = () => {
                 >
                   {selectedProduct.name}
                 </h2>
-                <p>{selectedProduct.desc}</p>
-
+                <p style={{ fontFamily: "Bree Serif" }}>
+                  {selectedProduct.desc}
+                </p>
                 <ul className="list-disc pl-5 ">
                   {selectedProduct.specs.map((spec, SpecIndex) => (
                     <li
@@ -86,7 +126,7 @@ const Mini = () => {
             </div>
           </>
         )}
-      </Carousel>
+      </Swiper>
     </div>
   );
 };

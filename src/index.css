@@ -118,3 +118,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@media (max-width: 640px) {
+  .custom-prev, .custom-next {
+    top: auto !important;
+    bottom: -30px;
+  }
+}
+

@@ -10,7 +10,7 @@ const Contact = () => {
     <motion.div 
      initial = {{opacity : 0,rotateX : "90deg"}}
     whileInView={{opacity : 1, rotateX : 0}}
-    transition={{duration: 2}}
+    transition={{duration: 1}}
     viewport={{once : true}}
     id="contact" className="flex flex-col gap-3 items-center p-3 w-full">
       <div>

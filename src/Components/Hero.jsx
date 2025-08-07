@@ -17,7 +17,7 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1 }}
         viewport={{ once: true }}
         className=" flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-2"
       >
