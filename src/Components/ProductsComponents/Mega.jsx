@@ -39,14 +39,14 @@ const Mega = () => {
       >
         <button
           onClick={() => swiperRef?.slidePrev()}
-          className="cursor-pointer absolute md:left-0.5 left-10 top-1/2 transform -translate-y-1/2 z-10 bg-black hover:bg-white hover:text-[#59BDF1] text-[#FF66C4] transition-colors duration-300 rounded-full p-2 shadow  hover:scale-105"
+          className="cursor-pointer absolute md:left-0.5 left-12 top-1/2 transform -translate-y-1/2 z-10 bg-black hover:bg-white hover:text-[#59BDF1] text-[#FF66C4] transition-colors duration-300 rounded-full p-2 shadow  hover:scale-105"
         >
           <MdArrowBack size={20} />
         </button>
 
         <button
           onClick={() => swiperRef?.slideNext()}
-          className="cursor-pointer absolute md:right-0.5 right-10 top-1/2 transform -translate-y-1/2 z-10 bg-black hover:bg-white hover:text-[#59BDF1] text-[#FF66C4] transition-colors duration-300 rounded-full p-2 shadow hover:scale-105"
+          className="cursor-pointer absolute md:right-0.5 right-12 top-1/2 transform -translate-y-1/2 z-10 bg-black hover:bg-white hover:text-[#59BDF1] text-[#FF66C4] transition-colors duration-300 rounded-full p-2 shadow hover:scale-105"
         >
           <MdArrowForward size={20} />
         </button>
