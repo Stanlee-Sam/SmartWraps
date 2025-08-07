@@ -21,7 +21,7 @@ const Mega = () => {
     <div className=" flex items-center justify-center p-4">
       <Swiper
         className="relative w-full max-w-md mx-auto p-4"
-        style={{ height: "400px" }}
+        style={{ height: "450px" }}
         breakpoints={{
           340: {
             slidesPerView: 1,
@@ -56,7 +56,6 @@ const Mega = () => {
             <div className=" p-3  rounded-sm ">
               <div className=" flex flex-col gap-2 aspect-square items-center  ">
                 <div
-                  onClick={() => setSelectedProduct(mega)}
                   className="cursor-pointer rounded-md flex flex-col items-center gap-3 bg-white p-3"
                 >
                   <img
@@ -77,6 +76,13 @@ const Mega = () => {
                   >
                     Ksh {mega.price}
                   </h2>
+                   <button
+                  onClick={() => setSelectedProduct(mega)}
+                    style={{ fontFamily: "'Bree Serif'" }}
+                    className="cursor-pointer text-[12px] p-2 md:px-8 bg-[#FF66C4] text-black font-bold rounded-lg hover:bg-[#59BDF1] hover:text-white transition-colors duration-300 border-2 border-black shadow-lg active:scale-95"
+                  >
+                    More Details
+                  </button>
                 </div>
               </div>
             </div>
