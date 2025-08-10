@@ -26,7 +26,7 @@ const Footer = () => {
             <a href="https://www.tiktok.com/@smartwraps_254?is_from_webapp=1&sender_device=pc">
               <FaTiktok className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300" />
             </a>
-            <a href="#">
+            <a href="https://wa.me/254715146136">
               <FaWhatsapp className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300" />
             </a>
             {/* <a href="#">
