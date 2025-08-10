@@ -2,17 +2,45 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 // eslint-disable-next-line no-unused-vars
-import { motion } from "motion/react"
+import { motion } from "motion/react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID, 
+        import.meta.env.VITE_TEMPLATE_ID, form.current, {
+        publicKey: import.meta.env.VITE_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          toast('Email sent successfully!')
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error('Failed to send email!')
+        }
+      );
+  };
+
   return (
-    <motion.div 
-     initial = {{opacity : 0,rotateX : "90deg"}}
-    whileInView={{opacity : 1, rotateX : 0}}
-    transition={{duration: 1}}
-    viewport={{once : true}}
-    id="contact" className="flex flex-col gap-3 items-center p-3 w-full">
+    <motion.div
+      initial={{ opacity: 0, rotateX: "90deg" }}
+      whileInView={{ opacity: 1, rotateX: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      id="contact"
+      className="flex flex-col gap-3 items-center p-3 w-full"
+    >
       <div>
         <h2
           className="font-bold text-[20px] md:text-[28px]"
@@ -35,7 +63,7 @@ const Contact = () => {
             </div>
             <div className="text-left">
               <h3 style={{ fontFamily: "'Bree Serif'" }}>Address</h3>
-              <p  className="font-light">Nairobi, Kenya</p>
+              <p className="font-light">Ongata Rongai, Kenya</p>
             </div>
           </div>
           <div className="flex gap-10 items-center">
@@ -44,7 +72,7 @@ const Contact = () => {
             </div>
             <div className="text-left">
               <h3 style={{ fontFamily: "'Bree Serif'" }}>Phone</h3>
-              <p  className="font-light">+254-712-456-789</p>
+              <p className="font-light">+254-715-146-136</p>
             </div>
           </div>
           <div className="flex gap-10 items-center">
@@ -53,29 +81,43 @@ const Contact = () => {
             </div>
             <div className="text-left">
               <h3 style={{ fontFamily: "'Bree Serif'" }}>Email</h3>
-              <p  className="font-light">smartwraps@gmail.com</p>
+              <p className="font-light">smartwrapske@gmail.com</p>
             </div>
           </div>
         </div>
         <div className="rounded-lg bg-[#F5F5F5] md:w-[50%] w-[80%]">
-          <form className="grid justify-self-center w-[100%] md:w-[100%]" action="">
-            <h3 style={{ fontFamily: "'Bree Serif'" }} className="p-5 font-bold text-center">Send Message</h3>
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="grid justify-self-center w-[100%] md:w-[100%]"
+            action=""
+          >
+            <h3
+              style={{ fontFamily: "'Bree Serif'" }}
+              className="p-5 font-bold text-center"
+            >
+              Send Message
+            </h3>
             <div className="grid place-items-center gap-5 p-5 w-full">
-              <input style={{ fontFamily: "'Bree Serif'" }}
+              <input
+                style={{ fontFamily: "'Bree Serif'" }}
                 className="p-3 border-b rounded-lg text-black flex w-full"
                 type="text"
                 id="name"
-                name="name"
+                name="user_name"
                 placeholder="Full Name"
                 required
               />
-              <input style={{ fontFamily: "'Bree Serif'" }}
+              <input
+                style={{ fontFamily: "'Bree Serif'" }}
                 className="p-3 border-b rounded-lg text-black flex w-full "
                 type="email"
+                name="user_email"
                 placeholder="Enter Email"
               />
 
-              <textarea style={{ fontFamily: "'Bree Serif'" }}
+              <textarea
+                style={{ fontFamily: "'Bree Serif'" }}
                 className="p-3 border-b-1 rounded-lg text-black flex w-full h-[150px] resize-none"
                 rows="5"
                 id="message"
@@ -86,7 +128,7 @@ const Contact = () => {
             </div>
             <div className="grid w-full">
               <button
-              style={{ fontFamily: "'Bree Serif'" }}
+                style={{ fontFamily: "'Bree Serif'" }}
                 type="submit"
                 className=" cursor-pointer place-self-center bg-[#59BDF1] text-white rounded-md p-2 m-5 hover:bg-[#FF66C4] hover:text-black transition-colors ease-in-out duration-300 w-[50%] "
               >

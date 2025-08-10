@@ -37,7 +37,9 @@ const Mini = () => {
         modules={[Navigation]}
         onSwiper={(swiper) => setSwiperRef(swiper)}
       >
-        <button
+        {minis.length > 1 && (
+          <>
+          <button
           onClick={() => swiperRef?.slidePrev()}
           className="cursor-pointer absolute md:left-0.5 left-12 top-1/2 transform -translate-y-1/2 z-10 bg-black hover:bg-white hover:text-[#59BDF1] text-[#FF66C4] transition-colors duration-300 rounded-full p-2 shadow  hover:scale-105"
         >
@@ -50,13 +52,17 @@ const Mini = () => {
         >
           <MdArrowForward size={20} />
         </button>
+          </>
+
+        )}
+        
 
         {minis.map((mini, index) => (
           <SwiperSlide key={index}>
             <div className=" p-3  rounded-sm ">
               <div className=" flex flex-col gap-2 aspect-square items-center  ">
                 <div
-                  className="cursor-pointer rounded-md flex flex-col items-center gap-3 bg-white p-3"
+                  className="cursor-pointer rounded-md flex flex-col items-center gap-3 bg-white p-3 hover:scale-105"
                 >
                   <img
                     className="rounded-lg w-50 h-70  bg-center"

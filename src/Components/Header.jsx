@@ -56,9 +56,10 @@ const Header = () => {
           </button>
         </a>
       </div>
+      
       {isOpen && (
         <div
-          className={`fixed top-0 right-0 z-40 h-full w-[80%] bg-[#FF66C4] md:hidden flex flex-col items-center gap-2 pt-20  border-black transition-transform duration-300 ease-in-out ${
+          className={`fixed top-0 right-0 z-40 h-full w-[80%] bg-[#FF66C4] md:hidden flex flex-col items-center gap-2 pt-20  border-black  transition-all duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
