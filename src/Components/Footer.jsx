@@ -23,7 +23,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex justify-evenly gap-5 md:gap-4 text-2xl p-4">
-            <a href="#">
+            <a href="https://www.tiktok.com/@smartwraps_254?is_from_webapp=1&sender_device=pc">
               <FaTiktok className="hover:text-[#FF66C4] transition-colors ease-in-out duration-300" />
             </a>
             <a href="#">

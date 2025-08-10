@@ -56,7 +56,7 @@ const Mega = () => {
             <div className=" p-3  rounded-sm ">
               <div className=" flex flex-col gap-2 aspect-square items-center  ">
                 <div
-                  className="cursor-pointer rounded-md flex flex-col items-center gap-3 bg-white p-3"
+                  className="cursor-pointer rounded-md flex flex-col items-center gap-3 bg-white p-3 hover:scale-105"
                 >
                   <img
                     className="rounded-lg w-50 h-70  bg-center"

@@ -36,26 +36,29 @@ const Maxi = () => {
         modules={[Navigation]}
         onSwiper={(swiper) => setSwiperRef(swiper)}
       >
-        <button
-          onClick={() => swiperRef?.slidePrev()}
-          className="cursor-pointer absolute md:left-0.5 left-12 top-1/2 transform -translate-y-1/2 z-10 bg-black hover:bg-white hover:text-[#59BDF1] text-[#FF66C4] transition-colors duration-300 rounded-full p-2 shadow  hover:scale-105"
-        >
-          <MdArrowBack size={20} />
-        </button>
+        {maxis.length > 1 && (
+          <>
+            <button
+              onClick={() => swiperRef?.slidePrev()}
+              className="cursor-pointer absolute md:left-0.5 left-12 top-1/2 transform -translate-y-1/2 z-10 bg-black hover:bg-white hover:text-[#59BDF1] text-[#FF66C4] transition-colors duration-300 rounded-full p-2 shadow  hover:scale-105"
+            >
+              <MdArrowBack size={20} />
+            </button>
 
-        <button
-          onClick={() => swiperRef?.slideNext()}
-          className="cursor-pointer absolute md:right-0.5 right-12 top-1/2 transform -translate-y-1/2 z-10 bg-black hover:bg-white hover:text-[#59BDF1] text-[#FF66C4] transition-colors duration-300 rounded-full p-2 shadow hover:scale-105"
-        >
-          <MdArrowForward size={20} />
-        </button>
+            <button
+              onClick={() => swiperRef?.slideNext()}
+              className="cursor-pointer absolute md:right-0.5 right-12 top-1/2 transform -translate-y-1/2 z-10 bg-black hover:bg-white hover:text-[#59BDF1] text-[#FF66C4] transition-colors duration-300 rounded-full p-2 shadow hover:scale-105"
+            >
+              <MdArrowForward size={20} />
+            </button>
+          </>
+        )}
+
         {maxis.map((maxi, index) => (
           <SwiperSlide key={index}>
             <div className=" p-3  rounded-sm ">
               <div className=" flex flex-col gap-2 aspect-square items-center  ">
-                <div
-                  className="cursor-pointer rounded-md flex flex-col items-center gap-3 bg-white p-3"
-                >
+                <div className="cursor-pointer rounded-md flex flex-col items-center gap-3 bg-white p-3 hover:scale-105">
                   <img
                     className="rounded-lg w-50 h-70  bg-center"
                     src={maxi.img}
@@ -74,8 +77,8 @@ const Maxi = () => {
                   >
                     Ksh {maxi.price}
                   </h2>
-                   <button
-                  onClick={() => setSelectedProduct(maxi)}
+                  <button
+                    onClick={() => setSelectedProduct(maxi)}
                     style={{ fontFamily: "'Bree Serif'" }}
                     className="cursor-pointer text-[12px] p-2 md:px-8 bg-[#FF66C4] text-black font-bold rounded-lg hover:bg-[#59BDF1] hover:text-white transition-colors duration-300 border-2 border-black shadow-lg active:scale-95"
                   >
