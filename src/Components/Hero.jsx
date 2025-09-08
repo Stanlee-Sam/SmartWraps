@@ -20,7 +20,7 @@ const Hero = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className=" flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-2"
+        className=" flex flex-col items-center absolute  md:bottom-1/4 bottom-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-2"
       >
         <h1
           className="text-4xl md:text-[96px] font-bold text-white drop-shadow-lg  text-center "
