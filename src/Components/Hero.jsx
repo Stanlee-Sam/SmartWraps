@@ -10,7 +10,7 @@ const Hero = () => {
       >
         <img
           className="h-screen w-full object-cover object-center brightness-35 relative overflow-hidden bg-center bg-fixed bg-no-repeat "
-          src="../../src/assets/Images/hero.jpg"
+          src="../../public/Images/hero.jpg"
           alt=""
         />
       </div>
