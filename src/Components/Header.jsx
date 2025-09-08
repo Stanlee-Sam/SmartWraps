@@ -2,6 +2,7 @@ import { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router";
+import heroLogo from "../../src/assets/Images/heroLogo.png"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ const Header = () => {
         <a href="#home">
           <img
             className="w-18 h-18 md:w-20 md:h-20"
-            src="../../src/assets/Images/heroLogo.png"
+            src= {heroLogo}
             alt=""
           />
         </a>

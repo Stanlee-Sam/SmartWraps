@@ -1,5 +1,6 @@
 import { FaTiktok, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router";
+import FooterLogo from "../../src/assets/Images/footerLogo.png"
 const Footer = () => {
   return (
     <section className="bg-black rounded-t-lg">
@@ -7,7 +8,7 @@ const Footer = () => {
         <a href="#home">
           <img
             className="w-[150px] place-self-center   "
-            src="../../src/assets/Images/footerLogo.png"
+            src={FooterLogo}
             alt=""
           />
         </a>

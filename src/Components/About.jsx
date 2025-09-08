@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
+import AboutImg from "../../src/assets/Images/about.jpeg"
 const About = () => {
   return (
     <motion.div
@@ -22,7 +23,7 @@ const About = () => {
         <div className="md:w-1/2 flex flex-col items-center">
           <img
             className="rounded-xl w-100 h-100 md:w-[300px] md:h-[270px]"
-            src="../../src/assets/Images/about.jpeg"
+            src={AboutImg}
             alt=""
           />
         </div>
