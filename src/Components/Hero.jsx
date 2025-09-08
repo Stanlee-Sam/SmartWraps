@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
+import heroImg from '../../src/assets/Images/hero.jpg'
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
       >
         <img
           className="h-screen w-full object-cover object-center brightness-35 relative overflow-hidden bg-center bg-fixed bg-no-repeat "
-          src="../../public/Images/hero.jpg"
+          src= {heroImg}
           alt=""
         />
       </div>
