@@ -5,15 +5,15 @@ import Mini from "./ProductsComponents/Mini";
 import Mega from "./ProductsComponents/Mega";
 import Maxi from "./ProductsComponents/Maxi";
 // eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Books from "./ProductsComponents/Books";
 
 const Products = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, translateX: "100%" }}
-      whileInView={{ opacity: 1, translateX: 0 }}
-      transition={{ duration: 1 }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
       id="products"
       className="p-3 bg-[#59BDF1] rounded-lg flex flex-col gap-3 items-center w-full"
@@ -27,9 +27,9 @@ const Products = () => {
         </h2>
       </div>
       <motion.div
-        initial={{ opacity: 0, translateX: "-100%" }}
-        whileInView={{ opacity: 1, translateX: 0 }}
-        transition={{ duration: 4 }}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
         className="bg-[#FF66C4] flex flex-row justify-evenly items-center rounded-md  gap-2 p-2 w-[90%]"
       >
